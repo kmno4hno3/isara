@@ -1,0 +1,40 @@
+body {
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+/*header*/
+ul {
+  display: flex;
+  list-style:none;
+}
+
+ul li:first-child {
+  width: 400px;
+  border:solid;
+}
+
+ul li:nth-child(2) {
+  margin-left: auto;
+  background-color: #DC143C;
+  width: 300px;
+  text-align: center;
+  border-radius: 100px;
+}
+
+ul li img {
+  width: 130px;
+}
+
+ul li a {
+  color:white;
+}
+
+
+
+.logo {
+  background-image: url("../images/main.png");
+  height: 540px;
+  text-align: center;
+  background-repeat:  no-repeat;
+  background-size: cover;
+}
