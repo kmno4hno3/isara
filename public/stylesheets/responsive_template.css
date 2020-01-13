@@ -1,0 +1,16 @@
+/* 大きいPC向けレイアウト */
+@media screen and (min-width:1190px){
+
+}
+/* PC向けレイアウト */
+@media screen and (max-width:1190px){
+
+}
+/* タブレット向けレイアウト */
+@media screen and (max-width:768px){
+
+}
+/* スマートフォン向けレイアウト */
+@media screen and (max-width:479px){
+
+}
