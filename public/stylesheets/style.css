@@ -1,5 +1,9 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  font: 14px "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", sans-serif;
 }
 
 .container {
@@ -11,19 +15,17 @@ body {
 /*header*/
 header {
   width:100%;
-  background-color:white !important;
   position :fixed;
   top: 0;               /* 一番上にぴったりくっつく */
   z-index: 10;
+  padding: 15px 15px !important;
+  background-color:white !important;
 }
-
-
 
 header ul {
   display:flex;
   list-style:none;            /* liの箇条書きの点を消す */
   align-items: center;        /* 上下中心に配置 */
-  padding: 10px 10px;
 }
 
 header ul li:first-child {
@@ -34,7 +36,6 @@ header ul li:first-child {
 header ul li:nth-child(2) {
   margin-left:auto;
   background-color: #da6b64;
-  height: 40px;
   border-radius: 100px;
   display: flex;              /* フレックスボックス */
   justify-content: center;    /* 左右中心に配置 */
@@ -53,8 +54,8 @@ header ul li a {
 
 /* 大きいPC向けレイアウト */
 @media screen and (min-width:1190px){
-  header ul{
-    height:55px;
+  header {
+    height:75px !important;
   }
 
   header ul li:first-child {
@@ -62,25 +63,30 @@ header ul li a {
   }
 
   header ul li p img {
-    width: 130px;
+    width: 128px;
   }
 
   header ul li .header-subtitle {
-    margin-bottom: 7px;
-    font-weight: bold;
-    font-size:15px;
+    margin: 0 0 10px 7px;
+    font-size:14px;
+    font-weight:bold;
+    /*font-family: "Hiragino Kaku Gothic Pro";*/
+    letter-spacing: 1.5px;
   }
 
   header ul li:nth-child(2){
-    width: 310px;
+    width: 317px;
+    height: 44px;
     font-size:14px;
+    letter-spacing: 1.5px;
   }
 }
 
 /* PC向けレイアウト */
 @media screen and (max-width:1190px){
+
   header ul{
-    height:55px;
+    height:45px;
   }
 
   header ul li:first-child {
@@ -99,6 +105,7 @@ header ul li a {
 
   header ul li:nth-child(2){
     width: 260px;
+    height: 44px;
     font-size:12px;
   }
 }
@@ -106,8 +113,9 @@ header ul li a {
 
 /* タブレット向けレイアウト */
 @media screen and (max-width:768px){
-  header ul{
-    height:55px;
+  header {
+    padding: 10px 10px !important;
+    height:62px !important;
   }
 
   header ul li:first-child {
@@ -128,22 +136,27 @@ header ul li a {
     transform: scale(0.9);
     transform-origin:0 0;
   }
+
+  header ul li:nth-child(2){
+    height:41px !important;
+  }
 }
 
 /* スマートフォン向けレイアウト */
 @media screen and (max-width:479px){
   header ul{
-    height:40px;
+    height:55px;
   }
 }
 
-/*--------------------------------------------------------------------*/
+
+/*----------------------------------------------------------------------------------------------------*/
+
 
 /* top-title */
 .top-title {
-  margin-top:65px;
   background-image: url("../images/main.png");
-  height: 530px;
+  height: 500px;
   text-align: center;
   background-repeat:  no-repeat;            /* 画像の繰り返しをしない */
   background-position: center;              /* 画像の中央表示*/
@@ -159,7 +172,6 @@ header ul li a {
   left:0;
   margin: auto;
   width: 400px;         /* widthの指定は必須 */
-  height:300px;         /* heightの指定は必須 */
 }
 
 .top-title-logo h2:nth-child(2){
@@ -168,57 +180,86 @@ header ul li a {
 
 .top-title-logo p img {
   width: 300px;
-  margin:10px 0 20px 0;
+  margin:20px 0 40px 0;
 }
 
 
 /* 大きいPC向けレイアウト */
 @media screen and (min-width:1190px){
+
+  .top-title{
+    margin-top: 75px;
+  }
+
+  .top-title-logo {
+    height:300px !important;         /* heightの指定は必須 */
+  }
+
   .top-title-logo h2 {
-    font-size: 30px;
+    font-size: 28px;
+    letter-spacing: 0.1rem;
+  }
+
+  .top-title-logo h2:nth-child(2){
+    margin:25px 0 0 0;
   }
 
   .top-title-logo p:not(img) {
     font-size:22px;
     font-family: bold;
   }
-
 }
 /* PC向けレイアウト */
 @media screen and (max-width:1190px){
+  .top-title{
+    margin-top: 75px;
+  }
+
+  .top-title-logo {
+    height:280px !important;         /* heightの指定は必須 */
+  }
+
   .top-title-logo h2 {
     font-size: 25px;
-    margin-bottom: 25px;
   }
 }
 /* タブレット向けレイアウト */
 @media screen and (max-width:768px){
   .top-title{
+    margin-top: 62px;
     height: 300px;
+  }
+
+  .top-title-logo {
+    height:270px !important;         /* heightの指定は必須 */
   }
 
   .top-title-logo h2 {
     font-size: 20px;
-    margin-bottom: 25px;
   }
 }
 /* スマートフォン向けレイアウト */
 @media screen and (max-width:479px){
-
+  .top-title{
+    margin-top: 62px;
+    height: 300px;
+  }
 }
 
 
 
-/*--------------------------------------------------------------------*/
+/*----------------------------------------------------------------------------------------------------*/
+
 /* contact-link */
+
 .contact-link {
   background-color: #ebb94d;
   width: 100%;
   position:relative;
+  height:537px !important;
 }
 
 .contact-link .container {
-  border:solid;
   position: absolute;
   top:0;
   right:0;
@@ -226,16 +267,92 @@ header ul li a {
   left:0;
   margin: auto;
   text-align: center;
-  height:350px;
+  /*border:solid;*/
 }
+
+.contact-link-contents p:nth-child(2){
+  margin:15px 0 20px 0;
+}
+
+.contact-link-contents br {
+  margin-bottom:20px !important;
+}
+
+/* 注釈 */
+.attention {
+  background-color:#F9F2F4;
+  font-size: 20px;
+  display:inline-block;
+  border-radius: 6px;
+  color:#c7254e;
+  padding: 2px 4px;
+  font-weight: bold;
+}
+
 
 .contact-link p:not(.attention) {
   color: white;
 }
 
-.contact-btn {
+/* お問い合わせ&資料請求はこちら */
+.big-contact-btn {
   background-color:#da6b64;
-  width: 100%;
+  display: inline-flex;
+  height:100px;
+  width:90%;
+  border-radius:100px;
+  justify-content: center;      /* 左右中央 */
+  align-items: center;          /* 上下中央 */
+  margin: 55px 0 45px 0; 
+  color:white;
+  text-decoration: none;
+  font-size:30px;
+}
+
+/* 申し込み期限 */
+.period-end{
+  margin:20px 0 30px 0;
+}
+
+/* SNSボタン */
+.sns-btn {
+  margin-top: 30px;
+}
+
+.sns-small-btn {
+  width: 75px;
+  height:22px;
+  display: inline-flex;
+  justify-content: center;      /* 左右中央 */
+  align-items: center;          /* 上下中央 */
+  border-radius: 5px;
+}
+
+.sns-small-btn a{
+  color:white;
+  padding:1px 8px 1px 6px ;
+  text-decoration: none;
+}
+
+.twitter {
+  font-size: 12px;
+  background-color:#1b95e0;
+}
+
+.facebook {
+  background-color:#016ea9;
+  color:white;
+  font-size:12px;
+}
+
+.sns-btn ul{
+  display:flex;
+  justify-content: center;
+  list-style:none;
+}
+
+.sns-btn li {
+  margin: 0 5px;
 }
 
 
@@ -245,14 +362,17 @@ header ul li a {
     height: 560px;
   }
 
-  .contact-link p:not(.attention) {
-    font-size: 20px;
+  .contact-link .container{
+    height:470px;
   }
-    .contact-btn {
-      background-color:#da6b64;
-      width: 100%;
-      height:100px;
-    }
+
+  .contact-link p:not(.attention) {
+    font-size: 22px;
+  }
+
+  .attention {
+    font-size: 18px !important;
+  }
 }
 /* PC向けレイアウト */
 @media screen and (max-width:1190px){
