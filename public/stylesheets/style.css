@@ -3,7 +3,7 @@
 }
 
 body {
-  font: 14px "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", sans-serif;
+  /*font-family:"ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", sans-serif !important;*/
 }
 
 .container {
@@ -360,6 +360,11 @@ header {
   margin-bottom:20px !important;
 }
 
+.complaining{
+  font-family:"ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", sans-serif;
+  font-family:"meiryo" !important;
+}
+
 /* 注釈 */
 .attention {
   background-color:#F9F2F4;
@@ -369,6 +374,7 @@ header {
   color:#c7254e;
   padding: 2px 4px;
   font-weight: bold;
+  font-family:Menlo,Monaco,Consolas,"Courier New",monospace;
 }
 
 
