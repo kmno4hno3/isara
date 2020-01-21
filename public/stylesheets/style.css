@@ -10,6 +10,7 @@ body {
   width: 100%;
   max-width: 1170px;
   margin:0 auto;
+  background-color: #FF33FF;
 }
 
 /*header*/
@@ -370,7 +371,7 @@ header {
   background-color:#F9F2F4;
   font-size: 20px;
   display:inline-block;
-  border-radius: 6px;
+  border-radius: 3px;
   color:#c7254e;
   padding: 2px 4px;
   font-weight: bold;
@@ -507,6 +508,10 @@ header {
     letter-spacing: 0.05rem;
   }
 
+  .period-end {
+    font-size:18px !important;
+  }
+
 }
 /* タブレット向けレイアウト */
 @media screen and (max-width:768px){
@@ -530,4 +535,282 @@ header {
 /* スマートフォン向けレイアウト */
 @media screen and (max-width:479px){
 
+}
+
+/*----------------------------------------------------------------------------------------------------*/
+/* about */
+
+/*----------------------------------------------------------*/
+/* about-top */
+.about {
+  background-color:green;
+  height:2000px;
+}
+
+.about-top {
+  background-image: url("../images/introbottom.jpg");
+  height: 587px;
+  text-align: center;
+  background-repeat:  no-repeat;            /* 画像の繰り返しをしない */
+  background-position: center;              /* 画像の中央表示*/
+  background-size: cover;                   /* 要素をちょうどよく覆うサイズにする */
+  position: relative; /*中央揃えしたい要素の親要素に指定*/
+}
+
+.about .container {
+  max-width: 870px;
+}
+
+.what-top, .what-bottom{
+  background-color:green;   /* あとで消す */
+
+  display: flex;              /* フレックスボックス */
+  justify-content: center;    /* 左右中心に配置 */
+  align-items: center;        /* 上下中心に配置 */
+  margin: 0 auto;
+  position: absolute;
+  top: 40px;
+
+
+  /* ---------鍵かっこ用開始 about-top・abot-bottom兼用---------*/
+  position:relative;
+}
+.what-top::before, .what-top::after, .what-bottom::before, .what-bottom::after {   /* 擬似要素beforeとafter */
+	content: '';
+	width: 50px;
+	height: 50px;
+	position: absolute;
+}
+
+.what-top::before, .what-bottom::before {                     /* 擬似要素before */
+  border-left: solid 4px #ebb94d;
+  border-top: solid 4px #ebb94d;
+  top:0;
+  left:0;
+}
+
+.what-top::after, .what-bottom::after {                       /* 擬似要素after */
+  border-right: solid 4px #ebb94d;
+  border-bottom: solid 4px #ebb94d;
+  bottom: 0;
+  right: 0;
+}
+/* ---------鍵かっこ用終了 ---------*/
+
+
+
+/* about-top文章 */
+.sentences, .small-sentences {
+  margin-top:83px;
+}
+
+.earning-power {
+  font-weight:bold;
+  background: linear-gradient(transparent 70%, #ebb94d 70%);    /* 下線 */
+}
+
+/* 大きいPC向けレイアウト */
+@media screen and (min-width:1190px){
+
+  .what-top{
+    height:100px;
+  }
+
+  /* about-top, about-bottom共通 */
+  .what {
+    font-size: 28px;
+    letter-spacing: 0.1rem;
+  }
+
+  .about-sentence {
+    font-size:20px;
+    letter-spacing: 0.1em;
+    margin-bottom:10px;
+  }
+
+  .small-sentences {
+    display:none;
+  }
+
+}
+/* PC向けレイアウト */
+@media screen and (max-width:1190px){
+
+  .what-top{
+    height:100px;
+  }
+
+  /* about-top, about-bottom共通 */
+  .what {
+    font-size: 24px;
+  }
+
+  .about-sentence {
+    font-size:16px;
+    letter-spacing: 0.1em;
+    margin-bottom:10px;
+  }
+
+  .small-sentences {
+    display:none;
+  }
+}
+
+/* タブレット向けレイアウト */
+@media screen and (max-width:768px){
+  .about-top {
+    height: 656px !important;
+  }
+
+  .what-top{
+    height:120px;
+  }
+
+  /* about-top, about-bottom共通 */
+  .what {
+    font-size: 20px;
+  }
+
+  .about-sentence {
+    font-size:15px;
+    margin-bottom:10px;
+  }
+
+  .about-top-p {
+    display:block;
+  }
+
+  .sentences {
+    display:none;
+  }
+
+  .small-sentences {
+    display:block;
+  }
+
+}
+/* スマートフォン向けレイアウト */
+@media screen and (max-width:479px){
+  .what-top{
+    height:120px;
+  }
+
+  /* about-top, about-bottom共通 */
+  .what {
+    font-size: 20px;
+  }
+
+  /* about-top, about-bottom共通 */
+  .what {
+    font-size: 20px;
+    margin-bottom:10px;
+  }
+
+  .about-top-p {
+    display:block;
+  }
+
+  .sentences {
+    display:none;
+  }
+
+  .small-sentences {
+    display:block;
+  }
+}
+
+
+
+
+/*----------------------------------------------------------*/
+/* about-bottom */
+
+.about-bottom {
+  background-color:#fef5e0;
+}
+
+.what-bottom{
+  flex-direction:column;        /* 1列で配置 */ 
+  height:100px;
+}
+
+.under-what-bottom{
+  margin:50px;
+  background-color:orange;
+  text-align:center;
+}
+
+.five-skills {
+  display:flex;
+  list-style-type:none;
+  background-color: yellow;
+  justify-content: center;    /* 左右中心に配置 */
+  align-items: center;        /* 上下中心に配置 */
+}
+
+/* 色分け */
+.skill {
+  background-color:#CCCCCC;
+}
+
+.sales {
+ background-color: #FFFFBB;
+}
+
+.document{
+  background-color: #BBFFFF;
+}
+
+.plusone {
+  background-color: #FFBBFF;
+}
+
+.connection {
+ background-color: #CC0000;
+}
+
+/* 大きいPC向けレイアウト */
+@media screen and (min-width:1190px){
+  .about-bottom {
+    height:646px;
+  }
+
+  .under-what-bottom{
+    font-size: 20px;
+  }
+}
+
+/* PC向けレイアウト */
+@media screen and (max-width:1190px){
+  .about-bottom {
+    height:632px;
+  }
+
+  .under-what-bottom{
+    font-size: 16px;
+  }
+}
+
+/* タブレット向けレイアウト */
+@media screen and (max-width:811px){
+  .about-bottom {
+    height:760px;
+  }
+
+  .under-what-bottom{
+    font-size: 15px;
+  }
+}
+
+/* スマートフォン向けレイアウト */
+@media screen and (max-width:768px){
+  .about-bottom {
+    height:531px;
+  }
+}
+
+@media screen and (max-width:479px){
+  .about-bottom {
+    height:711px;
+  }
 }
