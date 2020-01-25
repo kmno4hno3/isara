@@ -740,12 +740,29 @@ header {
   text-align:center;
 }
 
+.five-skills-wrapper {
+  border:solid #ebb94d;
+  border-radius:5px;
+  padding:30px;
+  width:100vw;
+  display:block;
+  text-align:center;
+}
+
 .five-skills {
   display:flex;
   list-style-type:none;
   background-color: yellow;
   justify-content: center;    /* 左右中心に配置 */
   align-items: center;        /* 上下中心に配置 */
+}
+
+.about-five-skill{
+  text-align:center;
+}
+
+.five-skill{
+  text-align:center;
 }
 
 
@@ -777,9 +794,20 @@ header {
     height:646px;
   }
 
+  .about-bottom .container {
+    height:500px;
+  }
+
   .under-what-bottom{
     font-size: 20px;
   }
+
+  .five-skills-wrapper{
+    height:230px;
+    background-color:white;
+  }
+
+  
 }
 
 /* PC向けレイアウト */
